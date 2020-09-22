@@ -1,9 +1,10 @@
+# Class apache::service description
 class apache::service (
-  String $configsource = lookup({"name" => "apache.servicename", "default_value" => ""})
+  String $servicename = lookup({'name' => 'apache.servicename', 'default_value' => ''})
   ) {
-  service { 'webserver-service':
-          name       => $servicename,
+  service { 'apache-service':
           ensure     => running,
+          name       => $servicename,
           enable     => true,
           hasrestart => true,
   }

@@ -1,0 +1,11 @@
+fixtures:
+  symlinks:
+    apache: "#{source_dir}"
+  forge_modules:
+    stdlib:
+      repo: "puppetlabs/stdlib"
+      ref: "6.4.0"
+  repositories:
+    firewall:
+      repo: "git://github.com/puppetlabs/puppetlabs-firewall"
+      ref: "v2.5.0"

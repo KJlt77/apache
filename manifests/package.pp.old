@@ -1,0 +1,15 @@
+# Class apache::package description
+class apache::package {
+  if $::osfamily == 'RedHat' {
+    package { 'apache-package':
+      ensure => present,
+      name   => 'httpd'
+    }
+  } elsif $::osfamily == 'Debian' {
+    package { 'apache-package':
+      ensure => present,
+      name   => 'apache2'
+    }
+  }
+
+}
