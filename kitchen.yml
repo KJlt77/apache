@@ -1,0 +1,29 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: puppet_apply
+  manifest_path: manifests
+  modules_path: modules
+  require_puppet_collections: true
+  require_puppet_repo: false
+  require_chef_for_busser: false
+
+platforms:
+  - name: ubuntu-20.04
+    driver_plugin: vagrant
+    driver_config:
+      box: ubuntu/focal64
+  - name: centos-8
+    driver_plugin: vagrant
+    driver_config:
+      box: centos/8
+
+verifier:
+  ruby_bindir: '/opt/puppetlabs/bin'
+
+suites:
+  - name: default
+    provisioner:
+      manifest: site.pp

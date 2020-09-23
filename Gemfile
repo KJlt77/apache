@@ -70,3 +70,10 @@ extra_gemfiles.each do |gemfile|
   end
 end
 # vim: syntax=ruby
+
+gem 'beaker'
+gem 'beaker-rspec'
+gem 'test-kitchen'
+gem 'kitchen-puppet', '>= 1.4.0'
+gem 'kitchen-vagrant'
+gem 'librarian-puppet'

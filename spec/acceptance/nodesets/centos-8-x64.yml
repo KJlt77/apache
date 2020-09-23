@@ -1,0 +1,11 @@
+HOSTS:
+  centos-8-x64:
+    roles:
+      - agent
+      - default
+    platform: el-8-x86_64
+    box: centos/8
+    hypervisor: vagrant
+    vagrant_memsize: 1024
+CONFIG:
+  type: foss
